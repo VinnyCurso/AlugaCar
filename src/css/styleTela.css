@@ -1,0 +1,27 @@
+.button {
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#61a2b1, #2A5058);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-size: 18;
+    -fx-pref-height: 40;
+    -fx-pref-width:100;
+}
+.button:novo {
+    -fx-background-color: linear-gradient(#2A5058, #61a2b1);
+}
+.textfield{
+    -fx-pref-height:40;
+    -fx-pref-width:550;
+}
+.label{
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
+ }
+ .idForm{
+     -fx-pading-rigth:40;
+     -fx-pading-lefth: 20;
+     
+ }
+  
