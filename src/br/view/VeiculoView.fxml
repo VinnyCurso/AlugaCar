@@ -18,7 +18,7 @@
    <top>
       <AnchorPane id="cabecalho" prefHeight="109.0" prefWidth="717.0" BorderPane.alignment="CENTER">
          <children>
-            <Label id="labeltitulo" layoutX="14.0" layoutY="27.0" text="Manter Veiculo" />
+            <Label id="labeltitulo" layoutX="14.0" layoutY="27.0" text="Cadastro Veiculo" />
             <Hyperlink layoutX="570.0" layoutY="36.0" text="Help" textFill="#f2ee10" AnchorPane.rightAnchor="25.0">
                <font>
                   <Font name="System Bold" size="19.0" />
