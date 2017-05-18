@@ -5,11 +5,14 @@ and open the template in the editor.
 */
 /* 
     Created on : 05/05/2017, 19:41:22
-    Author     : daniel
+    Author     : vinicius caetano
 */
 
 .root {
      -fx-background-image: url("/imagem/background.jpg");
+      -fx-background-repeat: stretch;
+     -fx-background-size: 1600 850;
+     -fx-background-position: center center;
 }
 .label {
     -fx-font-size: 14px;
@@ -37,4 +40,10 @@ and open the template in the editor.
 }
 .button:hover {
     -fx-background-color: linear-gradient(#2A5058, #61a2b1);
+}
+#btnToolbar{
+    -fx-pref-width: 70px;
+    -fx-pref-height: 70px;
+    -fx-margin-left: 100px;
+    -fx-margin-right: 100px;
 }
