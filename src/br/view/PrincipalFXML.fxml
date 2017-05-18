@@ -7,15 +7,15 @@
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../css/estilo.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.controller.PrincipalFXMLCtr">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../css/estilo.css" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.controller.PrincipalFXMLCtr">
    <children>
       <MenuBar>
         <menus>
           <Menu mnemonicParsing="false" text="Cliente" />
           <Menu mnemonicParsing="false" text="Veiculo" />
-          <Menu mnemonicParsing="false" text="Locacao" />
+          <Menu mnemonicParsing="false" text="Locação" />
             <Menu mnemonicParsing="false" text="Ocorrencias" />
-            <Menu mnemonicParsing="false" text="Devolucao" />
+            <Menu mnemonicParsing="false" text="Devolução" />
             <Menu mnemonicParsing="false" text="Help" />
         </menus>
       </MenuBar>
@@ -30,7 +30,7 @@
                   <Insets />
                </opaqueInsets>
             </Button>
-            <Button id="btnToolbar" mnemonicParsing="false" text="Locacao">
+            <Button id="btnToolbar" mnemonicParsing="false" text="Locação">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -40,7 +40,7 @@
                   <Insets />
                </opaqueInsets>
             </Button>
-            <Button id="btnToolbar" mnemonicParsing="false" text="Devolucao">
+            <Button id="btnToolbar" mnemonicParsing="false" text="Devolução">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>

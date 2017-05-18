@@ -14,9 +14,9 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="477.0" prefWidth="717.0" stylesheets="@../../css/formVeiculo.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="477.0" prefWidth="717.0" stylesheets="@../../css/formVeiculo.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.controller.VeiculoController">
    <top>
-      <AnchorPane id="cabecalho" prefHeight="109.0" prefWidth="717.0" stylesheets="@../../css/formVeiculo.css" BorderPane.alignment="CENTER">
+      <AnchorPane id="cabecalho" prefHeight="109.0" prefWidth="717.0" BorderPane.alignment="CENTER">
          <children>
             <Label id="labeltitulo" layoutX="14.0" layoutY="27.0" text="Manter Veiculo" />
             <Hyperlink layoutX="570.0" layoutY="36.0" text="Help" textFill="#f2ee10" AnchorPane.rightAnchor="25.0">
@@ -93,7 +93,7 @@
                   <Insets bottom="3.0" />
                </GridPane.margin>
             </Label>
-            <Label id="labelgrid" text="Ano de Fabricacao" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <Label id="labelgrid" text="Ano de Fabricação" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets bottom="3.0" />
                </GridPane.margin>
