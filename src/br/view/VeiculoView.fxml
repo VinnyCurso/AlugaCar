@@ -30,22 +30,22 @@
    <bottom>
       <HBox id="rodape" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Button id="btnNovo" mnemonicParsing="false" text="Novo">
+            <Button id="btnNovo" fx:id="btnNovo" mnemonicParsing="false" text="Novo">
                <HBox.margin>
                   <Insets left="10.0" right="10.0" />
                </HBox.margin>
             </Button>
-            <Button id="btnSalvar" mnemonicParsing="false" text="Salvar">
+            <Button id="btnSalvar" fx:id="btnSalvar" mnemonicParsing="false" text="Salvar">
                <HBox.margin>
                   <Insets left="10.0" right="10.0" />
                </HBox.margin>
             </Button>
-            <Button id="btnExcluir" mnemonicParsing="false" text="Excluir">
+            <Button id="btnExcluir" fx:id="btnExcluir" mnemonicParsing="false" text="Excluir">
                <HBox.margin>
                   <Insets left="10.0" right="10.0" />
                </HBox.margin>
             </Button>
-            <Button id="btnPesquisar" mnemonicParsing="false" text="Pesquisar">
+            <Button id="btnPesquisar" fx:id="btnPesquisar" mnemonicParsing="false" text="Pesquisar">
                <HBox.margin>
                   <Insets left="10.0" right="10.0" />
                </HBox.margin>
@@ -103,12 +103,12 @@
                   <Insets bottom="3.0" />
                </GridPane.margin>
             </Label>
-            <ComboBox prefHeight="40.0" prefWidth="319.0" GridPane.rowIndex="1" />
-            <ComboBox prefHeight="40.0" prefWidth="319.0" GridPane.rowIndex="3" />
-            <TextField prefHeight="40.0" prefWidth="319.0" GridPane.rowIndex="5" />
-            <TextField prefHeight="40.0" prefWidth="318.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <TextField prefHeight="40.0" prefWidth="318.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <TextField prefHeight="40.0" prefWidth="318.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <ComboBox fx:id="comboMarca" prefHeight="40.0" prefWidth="319.0" GridPane.rowIndex="1" />
+            <ComboBox fx:id="comboModelo" prefHeight="40.0" prefWidth="319.0" GridPane.rowIndex="3" />
+            <TextField fx:id="txtPlaca" prefHeight="40.0" prefWidth="319.0" GridPane.rowIndex="5" />
+            <TextField fx:id="txtChassi" prefHeight="40.0" prefWidth="318.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField fx:id="txtAnoFabricacao" prefHeight="40.0" prefWidth="318.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <TextField fx:id="txtCor" prefHeight="40.0" prefWidth="318.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
          </children>
       </GridPane>
    </center>

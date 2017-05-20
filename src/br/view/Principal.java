@@ -14,7 +14,9 @@ public class Principal extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("PrincipalFXML.fxml"));
         
         Scene scene = new Scene(root);
-        scene.getStylesheets().add(Principal.class.getResource("/imagem/background.jpg").toExternalForm());
+        
+        scene.getStylesheets().add(Principal.class.getResource("/imagem/Queroimagem.png").toExternalForm());
+        
         stage.setScene(scene);
         stage.setMaximized(true);
         stage.show();

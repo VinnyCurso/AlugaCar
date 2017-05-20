@@ -7,7 +7,7 @@
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../css/estilo.css" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.controller.PrincipalFXMLCtr">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../css/estilo.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.controller.PrincipalFXMLCtr">
    <children>
       <MenuBar>
         <menus>
@@ -21,16 +21,16 @@
       </MenuBar>
       <ToolBar prefHeight="40.0" prefWidth="200.0">
         <items>
-          <Button id="btnToolbar" fx:id="btnFxCliente" mnemonicParsing="false" onAction="#btnFxOnaction" text="Cliente">
+          <Button id="btnToolbar" fx:id="btnFxCliente" mnemonicParsing="false" onAction="#btnActionCliente" text="Cliente">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets></Button>
-            <Button id="btnToolbar" mnemonicParsing="false" text="Veiculo">
+            <Button id="btnToolbar" fx:id="btnVeiculo" mnemonicParsing="false" onAction="#btnActionVeiculo" text="Veiculo">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
             </Button>
-            <Button id="btnToolbar" mnemonicParsing="false" text="Locação">
+            <Button id="btnToolbar" fx:id="btnLocacao" mnemonicParsing="false" onAction="#btnActionLocacao" text="Locação">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>

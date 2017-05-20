@@ -9,7 +9,7 @@ and open the template in the editor.
 */
 
 .root {
-     -fx-background-image: url("/imagem/background.jpg");
+     -fx-background-image: url("/imagem/Queroimagem.png");
      -fx-background-repeat: stretch;
      -fx-background-size: 1600 850;
      -fx-background-position: center center;
