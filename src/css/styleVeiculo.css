@@ -1,0 +1,57 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13/05/2017, 10:29:26
+    Author     : daniel
+*/
+#cabecalho{
+    -fx-background-color: slategray;
+    
+}
+#rodape{
+    -fx-background-color:gray;
+}
+#labelTitulo{
+    -fx-font-size: 20pt;
+    -fx-text-fill:white;
+}
+#label{
+    -fx-font-style: bold italic;
+    -fx-font-size: 11pt;
+}
+#btnNovo{
+    -fx-pref-width:100px;
+    -fx-pref-height:40px;
+    -fx-background-color: green;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+#btnSalvar{
+    -fx-pref-width:100px;
+    -fx-pref-height:40px;
+    -fx-background-color: blue;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+#btnExcluir{
+     -fx-pref-width:100px;
+    -fx-pref-height:40px;
+    -fx-background-color: red;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+#btnPesquisar{
+     -fx-pref-width:100px;
+    -fx-pref-height:40px;
+    -fx-background-color: orange;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+

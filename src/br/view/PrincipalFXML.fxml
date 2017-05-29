@@ -4,22 +4,55 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../css/estilo.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.controller.PrincipalFXMLCtr">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="572.0" prefWidth="807.0" stylesheets="@../../css/estilo.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.controller.PrincipalFXMLCtr">
    <children>
       <MenuBar>
         <menus>
-          <Menu mnemonicParsing="false" text="Cliente" />
-          <Menu mnemonicParsing="false" text="Veiculo" />
+          <Menu mnemonicParsing="false" text="Cliente">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Cadastrar" />
+                  <MenuItem mnemonicParsing="false" text="Pesquisar" />
+               </items></Menu>
+          <Menu mnemonicParsing="false" text="Veiculo">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Cadastrar" />
+                  <MenuItem mnemonicParsing="false" text="Consultar" />
+                  <MenuItem mnemonicParsing="false" text="Frota" />
+                  <MenuItem mnemonicParsing="false" text="Incluir Marca" />
+                  <MenuItem mnemonicParsing="false" text="Incluir Modelo" />
+               </items></Menu>
           <Menu mnemonicParsing="false" text="Locação" />
-            <Menu mnemonicParsing="false" text="Ocorrencias" />
+            <Menu mnemonicParsing="false" text="Ocorrencias">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Registrar" />
+                  <MenuItem mnemonicParsing="false" text="Consultar" />
+               </items></Menu>
             <Menu mnemonicParsing="false" text="Devolução" />
-            <Menu mnemonicParsing="false" text="Help" />
+            <Menu mnemonicParsing="false" text="Despesas">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Manutenção" />
+                  <MenuItem mnemonicParsing="false" text="Nota Fiscal" />
+                  <MenuItem mnemonicParsing="false" text="Relatorio" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Pagamento">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Cadastrar" />
+                  <MenuItem mnemonicParsing="false" text="Relatorios" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+              </items>
+            </Menu>
         </menus>
       </MenuBar>
-      <ToolBar prefHeight="40.0" prefWidth="200.0">
+      <ToolBar prefHeight="88.0" prefWidth="807.0">
         <items>
           <Button id="btnToolbar" fx:id="btnFxCliente" mnemonicParsing="false" onAction="#btnActionCliente" text="Cliente">
                <opaqueInsets>
@@ -45,11 +78,13 @@
                   <Insets />
                </opaqueInsets>
             </Button>
-            <Button id="btnToolbar" mnemonicParsing="false" text="Help">
+            <Button id="btnToolbar" mnemonicParsing="false" text="Despesa">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
             </Button>
+            <Button id="btnToolbar" mnemonicParsing="false" text="Pagamento" />
+            <Button id="btnToolbar" mnemonicParsing="false" text="Help" />
         </items>
          <VBox.margin>
             <Insets />

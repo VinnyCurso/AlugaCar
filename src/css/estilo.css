@@ -42,8 +42,9 @@ and open the template in the editor.
     -fx-background-color: linear-gradient(#2A5058, #61a2b1);
 }
 #btnToolbar{
-    -fx-pref-width: 70px;
-    -fx-pref-height: 70px;
-    -fx-margin-left: 100px;
-    -fx-margin-right: 100px;
+    -fx-pref-width: 100px;
+    -fx-pref-height: 100px;
+    -fx-margin-left: 120px;
+    -fx-margin-right: 120px;
+
 }

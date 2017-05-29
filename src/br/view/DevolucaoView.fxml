@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="697.0" prefWidth="775.0" stylesheets="@../../css/formStyle.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.controller.ClienteCtr">
+   <bottom>
+      <HBox id="footer" alignment="CENTER" prefHeight="57.0" prefWidth="676.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button id="btnNovo" mnemonicParsing="false" text="Novo">
+               <HBox.margin>
+                  <Insets right="25.0" />
+               </HBox.margin>
+            </Button>
+            <Button id="btnSalvar" fx:id="btnSalvar" mnemonicParsing="false" onAction="#btnOnActionSalvar" text="Salvar">
+               <HBox.margin>
+                  <Insets right="25.0" />
+               </HBox.margin>
+            </Button>
+            <Button id="btnExcluir" mnemonicParsing="false" text="Excluir">
+               <HBox.margin>
+                  <Insets right="25.0" />
+               </HBox.margin>
+            </Button>
+            <Button id="btnPesquisar" fx:id="btnPesquisar" mnemonicParsing="false" onAction="#btnOnActionPesquisar" text="Pesquisar">
+               <HBox.margin>
+                  <Insets right="25.0" />
+               </HBox.margin>
+            </Button>
+         </children></HBox>
+   </bottom>
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="307.0" minWidth="10.0" prefWidth="307.0" />
+            <ColumnConstraints halignment="CENTER" maxWidth="154.0" minWidth="53.0" prefWidth="20.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="335.0" minWidth="10.0" prefWidth="335.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="20.0" prefHeight="0.0" valignment="BOTTOM" />
+            <RowConstraints minHeight="43.0" prefHeight="30.0" valignment="TOP" />
+            <RowConstraints minHeight="20.0" prefHeight="0.0" valignment="BOTTOM" />
+            <RowConstraints minHeight="43.0" prefHeight="30.0" valignment="TOP" />
+          <RowConstraints minHeight="20.0" prefHeight="0.0" valignment="BOTTOM" />
+          <RowConstraints minHeight="43.0" prefHeight="30.0" valignment="TOP" />
+            <RowConstraints minHeight="20.0" prefHeight="0.0" valignment="BOTTOM" />
+            <RowConstraints minHeight="43.0" prefHeight="30.0" valignment="TOP" />
+            <RowConstraints minHeight="20.0" prefHeight="0.0" valignment="BOTTOM" />
+            <RowConstraints minHeight="43.0" prefHeight="30.0" valignment="TOP" />
+            <RowConstraints minHeight="20.0" prefHeight="0.0" valignment="BOTTOM" />
+            <RowConstraints minHeight="43.0" prefHeight="30.0" valignment="TOP" />
+            <RowConstraints minHeight="20.0" prefHeight="0.0" valignment="BOTTOM" />
+            <RowConstraints minHeight="43.0" prefHeight="30.0" valignment="TOP" />
+            <RowConstraints minHeight="20.0" prefHeight="0.0" valignment="BOTTOM" />
+            <RowConstraints minHeight="43.0" prefHeight="30.0" valignment="TOP" />
+        </rowConstraints>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="40.0" right="40.0" top="10.0" />
+         </BorderPane.margin>
+         <children>
+            <Label id="textLabel" fx:id="lbIdNome" text="Codigo Devolução:" GridPane.columnSpan="2147483647">
+               <padding>
+                  <Insets left="2.0" />
+               </padding>
+               <effect>
+                  <Blend />
+               </effect>
+            </Label>
+            <Label id="textLabel" fx:id="lbIdDataNascimento" text="Data Locacão:" GridPane.columnSpan="2147483647" GridPane.rowIndex="8">
+               <padding>
+                  <Insets left="2.0" />
+               </padding>
+               <effect>
+                  <Blend />
+               </effect>
+            </Label>
+            <Label id="textLabel" fx:id="lbIdCep" text="Quilometragem Inicial:" GridPane.columnSpan="2147483647" GridPane.rowIndex="10">
+               <padding>
+                  <Insets left="2.0" />
+               </padding>
+               <effect>
+                  <Blend />
+               </effect>
+            </Label>
+            <TextField id="textCampo" fx:id="txtFdIdNome" prefHeight="40.0" prefWidth="307.0" promptText="0" GridPane.rowIndex="1" />
+            <DatePicker id="textCampo" fx:id="txtFdIdDatNasc" prefHeight="40.0" prefWidth="307.0" promptText="dd/mm/aaaa" GridPane.rowIndex="9" />
+            <TextField fx:id="txtFdCpf" prefHeight="40.0" prefWidth="307.0" promptText="0" GridPane.rowIndex="3" />
+            <TextField fx:id="txtFdCep" prefHeight="40.0" prefWidth="307.0" promptText="00.000" GridPane.rowIndex="11" />
+            <Label id="textLabel" fx:id="lbIdRua" text="Valor Inicial:" GridPane.rowIndex="12">
+               <padding>
+                  <Insets left="2.0" />
+               </padding>
+               <effect>
+                  <Blend />
+               </effect>
+            </Label>
+            <TextField id="textCampo" fx:id="txtFdCnh" prefHeight="40.0" prefWidth="307.0" promptText="xxx-0000" GridPane.rowIndex="7" />
+            <TextField id="textCampo" fx:id="txtFdEmail" prefHeight="40.0" prefWidth="307.0" promptText="00.000" GridPane.columnIndex="2" GridPane.rowIndex="11" />
+            <TextField id="textCampo" fx:id="txtFdResidencial" prefHeight="40.0" prefWidth="335.0" promptText="0,00" GridPane.rowIndex="15" />
+            <Label id="textLabel" fx:id="lbIdCategoria" text="Codigo Locacao:" GridPane.rowIndex="2">
+               <padding>
+                  <Insets left="2.0" />
+               </padding>
+               <effect>
+                  <Blend />
+               </effect>
+            </Label>
+            <Label id="textLabel" fx:id="lbIdCnh" text="Placa :" GridPane.rowIndex="6">
+               <padding>
+                  <Insets left="2.0" />
+               </padding>
+               <effect>
+                  <Blend />
+               </effect>
+            </Label>
+            <Label id="textLabel" fx:id="lbIdVencCnh" text="Data Devolução" GridPane.columnIndex="2" GridPane.rowIndex="8">
+               <padding>
+                  <Insets left="2.0" />
+               </padding>
+               <effect>
+                  <Blend />
+               </effect>
+            </Label>
+            <DatePicker id="textCampo" fx:id="txtFdVencCnh" prefHeight="40.0" prefWidth="339.0" promptText="dd/mm/aaaa" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+            <Label id="textLabel" fx:id="lbIdEmail" text="Quilometragem Final:" GridPane.columnIndex="2" GridPane.rowIndex="10">
+               <padding>
+                  <Insets left="2.0" />
+               </padding>
+               <effect>
+                  <Blend />
+               </effect>
+            </Label>
+            <Label id="textLabel" fx:id="lbIdResidencial" text="Total Final:" GridPane.rowIndex="14">
+               <padding>
+                  <Insets left="2.0" />
+               </padding>
+               <effect>
+                  <Blend />
+               </effect>
+            </Label>
+            <CheckBox mnemonicParsing="false" text="Sim" GridPane.columnIndex="2" GridPane.rowIndex="13" />
+            <TextField fx:id="txtFdCep1" prefHeight="40.0" prefWidth="307.0" promptText="0,00" GridPane.rowIndex="13" />
+            <Label id="textLabel" text="Cliente :" GridPane.rowIndex="4" />
+            <TextField prefHeight="40.0" prefWidth="335.0" promptText="nome" GridPane.rowIndex="5" />
+            <Button id="btnSalvar" mnemonicParsing="false" prefHeight="39.0" prefWidth="225.0" text="Pesquisar Locação" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Button id="btnSalvar" mnemonicParsing="false" prefHeight="40.0" prefWidth="121.0" text="Pesquisar Cliente" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <Button id="btnSalvar" mnemonicParsing="false" prefHeight="39.0" prefWidth="125.0" text="Pesquisar Veiculo" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+            <Label id="textLabel" text="Houve Ocorrencias ?" GridPane.columnIndex="2" GridPane.rowIndex="12" />
+            <CheckBox mnemonicParsing="false" text="Não" GridPane.columnIndex="2" GridPane.rowIndex="14" />
+            <Button id="btnPesquisar" mnemonicParsing="false" prefHeight="42.0" prefWidth="138.0" text="Ocorrencias" GridPane.columnIndex="2" GridPane.rowIndex="15" />
+         </children>
+      </GridPane>
+   </center>
+   <top>
+      <AnchorPane id="header" prefHeight="100.0" prefWidth="775.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label id="titleFunc" layoutX="43.0" layoutY="30.0" text="Devolução" />
+            <Hyperlink layoutX="599.0" layoutY="40.0" onAction="#hlinkOnActionHelpDesk" text="HelpDesk" textFill="#eb8705">
+               <font>
+                  <Font name="System Bold Italic" size="19.0" />
+               </font>
+            </Hyperlink>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>
