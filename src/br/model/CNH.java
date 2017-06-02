@@ -16,6 +16,7 @@ public class CNH {
     private String numeroCnh;
     private String categoria;
     private LocalDate dataValidade;
+    private String ab;
 
     public CNH() {
     }
@@ -24,6 +25,10 @@ public class CNH {
         this.numeroCnh = numeroCnh;
         this.categoria = categoria;
         this.dataValidade = dataValidade;
+    }
+
+    public CNH(String ab) {
+        this.ab=ab;
     }
 
     public String getNumeroCnh() {

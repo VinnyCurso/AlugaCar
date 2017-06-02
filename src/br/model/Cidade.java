@@ -13,6 +13,8 @@ public class Cidade {
     
     private long codigo;
     private String cidade;
+    //Atributos para combo
+    private String goiania;
 
     public Cidade() {
     }
@@ -20,6 +22,11 @@ public class Cidade {
     public Cidade(long codigo, String cidade) {
         this.codigo = codigo;
         this.cidade = cidade;
+    }
+
+    //Construtores para combo
+    public Cidade(String goiania) {
+        this.goiania = goiania;
     }
 
     public long getCodigo() {

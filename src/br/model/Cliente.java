@@ -5,6 +5,8 @@
  */
 package br.model;
 
+import java.time.LocalDate;
+
 /**
  *
  * @author vinicius caetano
@@ -14,17 +16,20 @@ public class Cliente {
     private long codigo;
     private String nome;
     private String cpf;
+    private LocalDate dataNascimento;
     private Endereco endereco;
     private Contato contato;
     private CNH cnh;
 
+
     public Cliente() {
     }
 
-    public Cliente(long codigo, String nome, String cpf, Endereco endereco, Contato contato, CNH cnh) {
+    public Cliente(long codigo, String nome, String cpf,LocalDate dataNascimento, Endereco endereco, Contato contato, CNH cnh) {
         this.codigo = codigo;
         this.nome = nome;
         this.cpf = cpf;
+        this. dataNascimento = dataNascimento;
         this.endereco = endereco;
         this.contato = contato;
         this.cnh = cnh;
@@ -76,6 +81,14 @@ public class Cliente {
 
     public void setCnh(CNH cnh) {
         this.cnh = cnh;
+    }
+
+    public LocalDate getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public void setDataNascimento(LocalDate dataNascimento) {
+        this.dataNascimento = dataNascimento;
     }
     
     

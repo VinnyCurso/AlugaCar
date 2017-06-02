@@ -20,6 +20,7 @@ public class Pagamento {
     private Enum formaPagamento;
     private Enum tipoPagamento;
 
+    
     public Pagamento() {
     }
 

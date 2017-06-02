@@ -1,0 +1,61 @@
+#header{
+    -fx-background-color: steelblue;
+}
+#footer{
+    -fx-background-color: gray;
+}
+#textLabel{
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-font-style: italic;
+    -fx-text-fill: black;
+
+}
+#titleFunc{
+    -fx-font-size: 30px;
+    -fx-font-weight: bold italic;
+    -fx-text-fill: white;
+}
+#textCampo{
+    -fx-pref-heigth: 60px;
+}
+#btnNovo{
+    
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    
+    -fx-background-color: green;
+    -fx-pref-width: 100px;
+    -fx-pref-heigth: 60px;
+}
+#btnSalvar{
+    
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    
+    -fx-background-color: blue;
+    -fx-pref-width: 100px;
+    -fx-pref-heigth: 60px;
+}
+#btnExcluir{
+    
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    
+    -fx-background-color: red;
+    -fx-pref-width: 100px;
+    -fx-pref-heigth: 60px;
+}
+#btnPesquisar{
+    
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    
+    -fx-background-color: orange;
+    -fx-pref-width: 100px;
+    -fx-pref-heigth: 60px;
+}

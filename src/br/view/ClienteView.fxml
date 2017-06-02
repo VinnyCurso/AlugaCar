@@ -5,213 +5,190 @@
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.Blend?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="697.0" prefWidth="775.0" stylesheets="@../../css/formStyle.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.controller.ClienteCtr">
-   <bottom>
-      <HBox id="footer" alignment="CENTER" prefHeight="57.0" prefWidth="676.0" BorderPane.alignment="CENTER">
-         <children>
-            <Button id="btnNovo" mnemonicParsing="false" text="Novo">
-               <HBox.margin>
-                  <Insets right="25.0" />
-               </HBox.margin>
-            </Button>
-            <Button id="btnSalvar" fx:id="btnSalvar" mnemonicParsing="false" onAction="#btnOnActionSalvar" text="Salvar">
-               <HBox.margin>
-                  <Insets right="25.0" />
-               </HBox.margin>
-            </Button>
-            <Button id="btnExcluir" mnemonicParsing="false" text="Excluir">
-               <HBox.margin>
-                  <Insets right="25.0" />
-               </HBox.margin>
-            </Button>
-            <Button id="btnPesquisar" fx:id="btnPesquisar" mnemonicParsing="false" onAction="#btnOnActionPesquisar" text="Pesquisar">
-               <HBox.margin>
-                  <Insets right="25.0" />
-               </HBox.margin>
-            </Button>
-         </children></HBox>
-   </bottom>
-   <center>
-      <GridPane BorderPane.alignment="CENTER">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="307.0" minWidth="10.0" prefWidth="307.0" />
-            <ColumnConstraints halignment="CENTER" maxWidth="154.0" minWidth="53.0" prefWidth="20.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="335.0" minWidth="10.0" prefWidth="335.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="20.0" prefHeight="0.0" valignment="BOTTOM" />
-            <RowConstraints minHeight="43.0" prefHeight="30.0" valignment="TOP" />
-            <RowConstraints minHeight="20.0" prefHeight="0.0" valignment="BOTTOM" />
-            <RowConstraints minHeight="43.0" prefHeight="30.0" valignment="TOP" />
-          <RowConstraints minHeight="20.0" prefHeight="0.0" valignment="BOTTOM" />
-          <RowConstraints minHeight="43.0" prefHeight="30.0" valignment="TOP" />
-            <RowConstraints minHeight="20.0" prefHeight="0.0" valignment="BOTTOM" />
-            <RowConstraints minHeight="43.0" prefHeight="30.0" valignment="TOP" />
-            <RowConstraints minHeight="20.0" prefHeight="0.0" valignment="BOTTOM" />
-            <RowConstraints minHeight="43.0" prefHeight="30.0" valignment="TOP" />
-            <RowConstraints minHeight="20.0" prefHeight="0.0" valignment="BOTTOM" />
-            <RowConstraints minHeight="43.0" prefHeight="30.0" valignment="TOP" />
-            <RowConstraints minHeight="20.0" prefHeight="0.0" valignment="BOTTOM" />
-            <RowConstraints minHeight="43.0" prefHeight="30.0" valignment="TOP" />
-            <RowConstraints minHeight="20.0" prefHeight="0.0" valignment="BOTTOM" />
-            <RowConstraints minHeight="43.0" prefHeight="30.0" valignment="TOP" />
-        </rowConstraints>
-         <BorderPane.margin>
-            <Insets bottom="10.0" left="40.0" right="40.0" top="10.0" />
-         </BorderPane.margin>
-         <children>
-            <Label id="textLabel" fx:id="lbIdNome" text="Nome Completo:" GridPane.columnSpan="2147483647">
-               <padding>
-                  <Insets left="2.0" />
-               </padding>
-               <effect>
-                  <Blend />
-               </effect>
-            </Label>
-            <Label id="textLabel" fx:id="lbIdCpf" text="CPF:" GridPane.columnSpan="2147483647" GridPane.rowIndex="2">
-               <padding>
-                  <Insets left="2.0" />
-               </padding>
-               <effect>
-                  <Blend />
-               </effect>
-            </Label>
-            <Label id="textLabel" fx:id="lbIdDataNascimento" text="Data de Nascimento:" GridPane.columnSpan="2147483647" GridPane.rowIndex="4">
-               <padding>
-                  <Insets left="2.0" />
-               </padding>
-               <effect>
-                  <Blend />
-               </effect>
-            </Label>
-            <Label id="textLabel" fx:id="lbIdCep" text="CEP:" GridPane.columnSpan="2147483647" GridPane.rowIndex="6">
-               <padding>
-                  <Insets left="2.0" />
-               </padding>
-               <effect>
-                  <Blend />
-               </effect>
-            </Label>
-            <TextField id="textCampo" fx:id="txtFdIdNome" prefHeight="40.0" prefWidth="307.0" promptText="nome completo" GridPane.rowIndex="1" />
-            <DatePicker id="textCampo" fx:id="txtFdIdDatNasc" prefHeight="40.0" prefWidth="307.0" promptText="dd/mm/aaaa" GridPane.rowIndex="5" />
-            <TextField fx:id="txtFdCpf" prefHeight="40.0" prefWidth="307.0" promptText="999.999.999-99" GridPane.rowIndex="3" />
-            <TextField fx:id="txtFdCep" prefHeight="40.0" prefWidth="307.0" promptText="99.999-999" GridPane.rowIndex="7" />
-            <Label id="textLabel" fx:id="lbIdRua" text="Rua:" GridPane.rowIndex="8">
-               <padding>
-                  <Insets left="2.0" />
-               </padding>
-               <effect>
-                  <Blend />
-               </effect>
-            </Label>
-            <TextField id="textCampo" fx:id="txtFdCnh" prefHeight="40.0" prefWidth="307.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <TextField id="textCampo" fx:id="txtFdCelular" prefHeight="40.0" prefWidth="307.0" GridPane.columnIndex="2" GridPane.rowIndex="11" />
-            <TextField id="textCampo" fx:id="txtFdEmail" prefHeight="40.0" prefWidth="307.0" GridPane.columnIndex="2" GridPane.rowIndex="7" />
-            <TextField id="textCampo" fx:id="txtFdResidencial" prefHeight="40.0" prefWidth="335.0" GridPane.columnIndex="2" GridPane.rowIndex="9" />
-            <Label id="textLabel" fx:id="lbIdCategoria" text="Categoria:" GridPane.columnIndex="2">
-               <padding>
-                  <Insets left="2.0" />
-               </padding>
-               <effect>
-                  <Blend />
-               </effect>
-            </Label>
-            <Label id="textLabel" fx:id="lbIdCnh" text="Número CNH:" GridPane.columnIndex="2" GridPane.rowIndex="2">
-               <padding>
-                  <Insets left="2.0" />
-               </padding>
-               <effect>
-                  <Blend />
-               </effect>
-            </Label>
-            <Label id="textLabel" fx:id="lbIdVencCnh" text="Data de Vencimento da CNH:" GridPane.columnIndex="2" GridPane.rowIndex="4">
-               <padding>
-                  <Insets left="2.0" />
-               </padding>
-               <effect>
-                  <Blend />
-               </effect>
-            </Label>
-            <Label id="textLabel" fx:id="lbIdComplemento" text="Complemento:" GridPane.rowIndex="10">
-               <padding>
-                  <Insets left="2.0" />
-               </padding>
-               <effect>
-                  <Blend />
-               </effect>
-            </Label>
-            <TextField fx:id="txtFdComplemento" prefHeight="40.0" prefWidth="307.0" promptText="Qd.,nº, lt, Cond., Apart., cidade, estado, bairro" GridPane.rowIndex="11" />
-            <ComboBox fx:id="txtFdCategoria" prefHeight="40.0" prefWidth="333.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <DatePicker id="textCampo" fx:id="txtFdVencCnh" prefHeight="40.0" prefWidth="339.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-            <Label id="textLabel" fx:id="lbIdEstado" text="Estado:" GridPane.rowIndex="12">
-               <padding>
-                  <Insets left="2.0" />
-               </padding>
-               <effect>
-                  <Blend />
-               </effect>
-            </Label>
-            <Label id="textLabel" fx:id="lbIdCidade" text="Cidade:" GridPane.rowIndex="14">
-               <padding>
-                  <Insets left="2.0" />
-               </padding>
-               <effect>
-                  <Blend />
-               </effect>
-            </Label>
-            <ComboBox fx:id="cmbFdEstado" onAction="#cmbOnActionEstado" prefHeight="40.0" prefWidth="307.0" GridPane.rowIndex="13" />
-            <ComboBox fx:id="cmbFdCidade" onAction="#cmbOnActionCidade" prefHeight="40.0" prefWidth="307.0" GridPane.rowIndex="15" />
-            <Label id="textLabel" fx:id="lbIdEmail" text="E-mail:" GridPane.columnIndex="2" GridPane.rowIndex="6">
-               <padding>
-                  <Insets left="2.0" />
-               </padding>
-               <effect>
-                  <Blend />
-               </effect>
-            </Label>
-            <Label id="textLabel" fx:id="lbIdResidencial" text="Telefone Residencial:" GridPane.columnIndex="2" GridPane.rowIndex="8">
-               <padding>
-                  <Insets left="2.0" />
-               </padding>
-               <effect>
-                  <Blend />
-               </effect>
-            </Label>
-            <Label id="textLabel" fx:id="lbIdCelular" text="Celular:" GridPane.columnIndex="2" GridPane.rowIndex="10">
-               <padding>
-                  <Insets left="2.0" />
-               </padding>
-               <effect>
-                  <Blend />
-               </effect>
-            </Label>
-            <CheckBox mnemonicParsing="false" text="Receber informações sobre promoção." GridPane.columnIndex="2" GridPane.rowIndex="13" />
-            <TextField fx:id="txtFdCep1" prefHeight="40.0" prefWidth="307.0" promptText="nome ou numero da rua ou avenida" GridPane.rowIndex="9" />
-         </children>
-      </GridPane>
-   </center>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="697.0" prefWidth="775.0" stylesheets="@../../css/clienteview.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.controller.ClienteCtr">
    <top>
-      <AnchorPane id="header" prefHeight="100.0" prefWidth="775.0" BorderPane.alignment="CENTER">
+      <AnchorPane id="header" prefHeight="84.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <Label id="titleFunc" layoutX="43.0" layoutY="30.0" text="Manter Cliente" />
-            <Hyperlink layoutX="599.0" layoutY="40.0" onAction="#hlinkOnActionHelpDesk" text="HelpDesk" textFill="#eb8705">
-               <font>
-                  <Font name="System Bold Italic" size="19.0" />
-               </font>
-            </Hyperlink>
+            <Label id="titleFunc" layoutX="47.0" layoutY="20.0" text="Cadastro Cliente" />
+            <Label layoutX="444.0" layoutY="34.0" text="HelpDesk" />
          </children>
       </AnchorPane>
    </top>
+   <center>
+      <GridPane id="textCampo" BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="70.0" />
+          <ColumnConstraints minWidth="10.0" prefWidth="30.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="70.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="20.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="20.0" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="20.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="20.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="20.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="20.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="20.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="20.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="20.0" />
+        </rowConstraints>
+         <children>
+            <Label id="textLabel" text="Nome Completo">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin></Label>
+            <Label id="textLabel" text="CPF" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin></Label>
+            <Label id="textLabel" text="Data Nascimento" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin></Label>
+            <Label id="textLabel" text="CEP" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin></Label>
+            <Label id="textLabel" text="Logradouro" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin></Label>
+            <Label id="textLabel" text="Complemento" GridPane.rowIndex="10">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin></Label>
+            <Label id="textLabel" text="Cidade" GridPane.rowIndex="12">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin></Label>
+            <Label id="textLabel" text="Estado" GridPane.rowIndex="14">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin></Label>
+            <Label id="textLabel" text="Numero CNH" GridPane.columnIndex="2">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin></Label>
+            <Label id="textLabel" text="Categoria" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin></Label>
+            <Label id="textLabel" text="Data de Vencimento CNH" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin></Label>
+            <Label id="textLabel" text="Telefone Residencial" GridPane.columnIndex="2" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin></Label>
+            <Label id="textLabel" text="Celular" GridPane.columnIndex="2" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin></Label>
+            <CheckBox fx:id="itemPromocao" mnemonicParsing="false" text="Receber informações sobre promoção" GridPane.columnIndex="2" GridPane.rowIndex="13">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin></CheckBox>
+            <TextField id="textCampo" fx:id="txtNome" prefHeight="40.0" prefWidth="307.0" promptText="nome completo" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin></TextField>
+            <TextField fx:id="txtCPF" prefHeight="40.0" prefWidth="307.0" promptText="000.000.000-00" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin></TextField>
+            <TextField fx:id="txtCep" prefHeight="40.0" prefWidth="307.0" promptText="00.000-000" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin></TextField>
+            <TextField fx:id="txtLogradouro" prefHeight="40.0" prefWidth="307.0" promptText="nome da rua" GridPane.rowIndex="9">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin></TextField>
+            <TextField fx:id="txtComplemento" prefHeight="40.0" prefWidth="307.0" promptText="quadra, lote, numero, bairro" GridPane.rowIndex="11">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin></TextField>
+            <TextField fx:id="txtNumeroCnh" prefHeight="40.0" prefWidth="307.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin></TextField>
+            <TextField fx:id="txtTelefoneResidencial" prefHeight="40.0" prefWidth="307.0" promptText="(00)0000-0000" GridPane.columnIndex="2" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin></TextField>
+            <Label id="textLabel" text="Email" GridPane.columnIndex="2" GridPane.rowIndex="10">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin></Label>
+            <TextField fx:id="txtCelular" prefHeight="40.0" prefWidth="307.0" promptText="(00)00000-0000" GridPane.columnIndex="2" GridPane.rowIndex="9">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin></TextField>
+            <TextField fx:id="txtEmail" prefHeight="40.0" prefWidth="307.0" promptText="xxxxxxx@xxxx.com" GridPane.columnIndex="2" GridPane.rowIndex="11">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin></TextField>
+            <ComboBox fx:id="cmbCategoria" prefHeight="40.0" prefWidth="370.0" promptText="Selecione...." GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin></ComboBox>
+            <ComboBox fx:id="cmbCidade" prefHeight="40.0" prefWidth="370.0" promptText="Selecione...." GridPane.rowIndex="13">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin></ComboBox>
+            <ComboBox fx:id="cmbEstado" prefHeight="40.0" prefWidth="370.0" promptText="Selecione...." GridPane.rowIndex="15">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin></ComboBox>
+            <DatePicker fx:id="pikerDataNascimento" prefHeight="40.0" prefWidth="370.0" promptText="dd/mm/aaaa" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin></DatePicker>
+            <DatePicker fx:id="pikerVencimentoCnh" prefHeight="40.0" prefWidth="370.0" promptText="dd/mm/aaaa" GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin></DatePicker>
+         </children>
+      </GridPane>
+   </center>
+   <bottom>
+      <HBox id="footer" alignment="CENTER" prefHeight="80.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnNovo" mnemonicParsing="false" text="Novo">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin></Button>
+            <Button fx:id="btnSalvar" mnemonicParsing="false" text="Salvar">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin></Button>
+            <Button fx:id="btnExcluir" mnemonicParsing="false" text="Excluir">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin></Button>
+            <Button fx:id="btnPesquisar" mnemonicParsing="false" onAction="#btnOnActionPesquisar" text="Pesquisar">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin></Button>
+         </children>
+      </HBox>
+   </bottom>
 </BorderPane>

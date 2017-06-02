@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="746.0" stylesheets="@../../css/esliloprincipal.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.controller.PrincipalCtr">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="Cliente">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Cadastrar" />
+                  <MenuItem mnemonicParsing="false" text="Pesquisar" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Veiculo">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#btnOnActionVeiculo" text="Cadastrar" />
+                  <MenuItem mnemonicParsing="false" text="Pesquisar" />
+               </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Locacao">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Registar Locacao" />
+                  <MenuItem mnemonicParsing="false" text="Consultar Locacao" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Ocorrencias">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Cadastrar Ocorrencias" />
+                  <MenuItem mnemonicParsing="false" text="Listar Ocorrencias" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Devolucao">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Cadastrar Devolucao" />
+                  <MenuItem mnemonicParsing="false" text="Consultar Devolucao" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Despesas">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Cadastrar Despesas" />
+                  <MenuItem mnemonicParsing="false" text="Relatorio Despesas" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Pagamento">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Cadastrar Pagamento" />
+                  <MenuItem mnemonicParsing="false" text="Relatorio Pagamento" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Sobre">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Informações" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Sair">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Sair do Sistema" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <ToolBar id="btnToolbar" prefHeight="201.0" prefWidth="746.0" stylesheets="@../../css/esliloprincipal.css">
+         <items>
+            <Button fx:id="btnCliente" mnemonicParsing="false" onAction="#btnOnActionCliente" text="Cliente" />
+            <Button fx:id="btnVeiculo" mnemonicParsing="false" onAction="#btnOnActionVeiculo" text="Veiculo" />
+            <Button fx:id="btnLocacao" mnemonicParsing="false" onAction="#btnOnActionLocacao" text="Locacao" />
+            <Button fx:id="btnOcorrencia" mnemonicParsing="false" onAction="#btnOnActionOcorrencia" text="Ocorrencia" />
+            <Button fx:id="btnDevolucao" mnemonicParsing="false" onAction="#btnOnActionDevolucao" text="Devolucao" />
+            <Button fx:id="btnDespesa" mnemonicParsing="false" onAction="#btnOnActionDespesa" text="Despesa" />
+            <Button fx:id="btnPagamento" mnemonicParsing="false" onAction="#btnOnActionPagamento" text="Pagamento" />
+         </items>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets left="60.0" right="60.0" />
+         </padding>
+      </ToolBar>
+      <ToolBar id="btnToolbar" prefHeight="100.0" prefWidth="746.0">
+        <items>
+          <Button contentDisplay="CENTER" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" text="Frota" />
+            <Button contentDisplay="CENTER" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" text="Pedido" />
+            <Button contentDisplay="CENTER" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" text="Manutencao" />
+            <Button contentDisplay="CENTER" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" text="Nota Fiscal" />
+        </items>
+         <padding>
+            <Insets left="60.0" right="60.0" />
+         </padding>
+      </ToolBar>
+   </children>
+</VBox>

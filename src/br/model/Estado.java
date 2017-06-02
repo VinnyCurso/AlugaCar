@@ -14,6 +14,7 @@ public class Estado {
     
     private long codigo;
     private String estado;
+    private String go;
 
     public Estado() {
     }
@@ -21,6 +22,10 @@ public class Estado {
     public Estado(long codigo, String estado) {
         this.codigo = codigo;
         this.estado = estado;
+    }
+
+    public Estado(String go) {
+       this.go=go;
     }
 
     public long getCodigo() {
