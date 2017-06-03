@@ -66,21 +66,21 @@
             </Menu>
         </menus>
       </MenuBar>
-      <ToolBar id="btnToolbar" prefHeight="201.0" prefWidth="746.0" stylesheets="@../../css/esliloprincipal.css">
+      <ToolBar prefHeight="103.0" prefWidth="746.0" stylesheets="@../../css/esliloprincipal.css">
          <items>
-            <Button fx:id="btnCliente" mnemonicParsing="false" onAction="#btnOnActionCliente" text="Cliente" />
-            <Button fx:id="btnVeiculo" mnemonicParsing="false" onAction="#btnOnActionVeiculo" text="Veiculo" />
-            <Button fx:id="btnLocacao" mnemonicParsing="false" onAction="#btnOnActionLocacao" text="Locacao" />
-            <Button fx:id="btnOcorrencia" mnemonicParsing="false" onAction="#btnOnActionOcorrencia" text="Ocorrencia" />
-            <Button fx:id="btnDevolucao" mnemonicParsing="false" onAction="#btnOnActionDevolucao" text="Devolucao" />
-            <Button fx:id="btnDespesa" mnemonicParsing="false" onAction="#btnOnActionDespesa" text="Despesa" />
-            <Button fx:id="btnPagamento" mnemonicParsing="false" onAction="#btnOnActionPagamento" text="Pagamento" />
+            <Button id="btnToolbar" fx:id="btnCliente" alignment="TOP_CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#btnOnActionCliente" text="Cliente" />
+            <Button id="btnToolbar" fx:id="btnVeiculo" alignment="TOP_CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#btnOnActionVeiculo" text="Veiculo" />
+            <Button id="btnToolbar" fx:id="btnLocacao" alignment="TOP_CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#btnOnActionLocacao" text="Locacao" />
+            <Button id="btnToolbar" fx:id="btnOcorrencia" alignment="TOP_CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#btnOnActionOcorrencia" text="Ocorrencia" />
+            <Button id="btnToolbar" fx:id="btnDevolucao" alignment="TOP_CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#btnOnActionDevolucao" text="Devolucao" />
+            <Button id="btnToolbar" fx:id="btnDespesa" alignment="TOP_CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#btnOnActionDespesa" text="Despesa" />
+            <Button id="btnToolbar" fx:id="btnPagamento" alignment="TOP_CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#btnOnActionPagamento" text="Pagamento" />
          </items>
          <VBox.margin>
             <Insets />
          </VBox.margin>
          <padding>
-            <Insets left="60.0" right="60.0" />
+            <Insets left="15.0" />
          </padding>
       </ToolBar>
       <ToolBar id="btnToolbar" prefHeight="100.0" prefWidth="746.0">

@@ -32,9 +32,7 @@
     -fx-background-color: linear-gradient(#2A5058, #61a2b1);
 }
 #btnToolbar{
-    -fx-pref-width: 100px;
-    -fx-pref-height: 100px;
-    -fx-margin-left: 120px;
-    -fx-margin-right: 120px;
+    -fx-pref-width: 80px;
+    -fx-pref-height: 80px;
 
 }

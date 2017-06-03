@@ -7,7 +7,7 @@ import br.model.Cliente;
 import br.model.Contato;
 import br.model.Endereco;
 import br.model.Estado;
-import java.awt.Checkbox;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -21,6 +21,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
@@ -46,10 +47,10 @@ public class ClienteCtr implements Initializable {
 @FXML TextField txtTelefoneResidencial;
 @FXML TextField txtCelular;
 @FXML TextField txtEmail;
-@FXML Checkbox itemPromocao;
-@FXML ComboBox cmbCategoria;
-@FXML ComboBox cmbCidade;
-@FXML ComboBox cmbEstado;
+@FXML CheckBox itemPromocao;
+@FXML ComboBox<String> cmbCategoria;
+@FXML ComboBox<String> cmbCidade;
+@FXML ComboBox<String> cmbEstado;
 
 @FXML private Button btnNovo;
 @FXML private Button btnSalvar;
@@ -61,14 +62,14 @@ private Endereco endereco;
 private Contato contato;
 private Stage stage;
 
-List<Estado> listEstado;
-ObservableList<Estado> ObsListestado;
+List<String> listEstado;
+ObservableList<String> ObsListestado;
 
-List<Cidade> listCidade;
-ObservableList<Cidade> ObsListcidade;
+List<String> listCidade;
+ObservableList<String> ObsListcidade;
 
-List<CNH> listCategoria;
-ObservableList<CNH> ObsListCategoria;
+List<String> listCategoria;
+ObservableList<String> ObsListCategoria;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -176,6 +177,8 @@ ObservableList<CNH> ObsListCategoria;
     
     public void CarregarComboCidade(){
       
+        List<String> listCidade = new ArrayList();
+        
        Cidade cidade1 = new Cidade("Goiânia");
        Cidade cidade2 = new Cidade("Aparecida de Goiânia");
        Cidade cidade3 = new Cidade("Guapo");
@@ -184,15 +187,14 @@ ObservableList<CNH> ObsListCategoria;
        Cidade cidade6 = new Cidade("Sao Paulo");
        Cidade cidade7 = new Cidade("Rio de Janeiro");
        
-        List<Cidade> listCidade = new ArrayList();
-       
-       listCidade.add(cidade1);
-       listCidade.add(cidade2);
-       listCidade.add(cidade3);
-       listCidade.add(cidade4);
-       listCidade.add(cidade5);
-       listCidade.add(cidade6);
-       listCidade.add(cidade7);
+ 
+       listCidade.add("Goiânia");
+       listCidade.add("Aparecida de Goiânia");
+       listCidade.add("Guapo");
+       listCidade.add("Trindade");
+       listCidade.add("Palmas");
+       listCidade.add("Sao Paulo");
+       listCidade.add("Rio de Janeiro");
 
        
        ObsListcidade = FXCollections.observableArrayList(listCidade);
@@ -201,7 +203,7 @@ ObservableList<CNH> ObsListCategoria;
     
     public void CarregarComboeEstado(){
      
-         List<Estado> listEstado = new ArrayList();
+         List<String> listEstado = new ArrayList();
          
           Estado estado1 = new Estado("GO");
           Estado estado2 = new Estado("TO");
@@ -209,10 +211,10 @@ ObservableList<CNH> ObsListCategoria;
           Estado estado4 = new Estado("RJ");
           
           
-          listEstado.add(estado1);
-          listEstado.add(estado2);
-          listEstado.add(estado3);
-          listEstado.add(estado4);
+          listEstado.add("GO");
+          listEstado.add("TO");
+          listEstado.add("SP");
+          listEstado.add("RJ");
           
          ObsListestado = FXCollections.observableArrayList(listEstado);
          cmbEstado.setItems(ObsListestado);
@@ -220,7 +222,7 @@ ObservableList<CNH> ObsListCategoria;
     
      public void CarregarComboeCategoria(){
     
-         List<CNH> listCategoria = new ArrayList();
+         List<String> listCategoria = new ArrayList();
          
          CNH categoria1 = new CNH("AB");
          CNH categoria2 = new CNH("B");
@@ -228,11 +230,11 @@ ObservableList<CNH> ObsListCategoria;
          CNH categoria4 = new CNH("D");
          CNH categoria5 = new CNH("E");
          
-         listCategoria.add(categoria1);
-         listCategoria.add(categoria2);
-         listCategoria.add(categoria3);
-         listCategoria.add(categoria4);
-         listCategoria.add(categoria5);
+         listCategoria.add("AB");
+         listCategoria.add("B");
+         listCategoria.add("C");
+         listCategoria.add("D");
+         listCategoria.add("E");
          
           ObsListCategoria = FXCollections.observableArrayList(listCategoria);
           cmbCategoria.setItems(ObsListCategoria);

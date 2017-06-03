@@ -48,50 +48,50 @@ public class PrincipalCtr implements Initializable {
         //Imagem Botao Cliente
         Image imgcliente = new Image(getClass().getResourceAsStream("/imagem/cliente.png"));
         ImageView imgView = new ImageView(imgcliente);
-        imgView.setFitHeight(65);
-        imgView.setFitWidth(65);
+        imgView.setFitHeight(50);
+        imgView.setFitWidth(50);
         btnCliente.setGraphic(imgView);
         
          //Imagem Botao Veiculo
         Image imgveiculo = new Image(getClass().getResourceAsStream("/imagem/veiculo.png"));
         ImageView imgView1 = new ImageView(imgveiculo);
-        imgView1.setFitHeight(65);
-        imgView1.setFitWidth(65);
+        imgView1.setFitHeight(50);
+        imgView1.setFitWidth(50);
         btnVeiculo.setGraphic(imgView1);
 //        
           //Imagem Botao Locacao
         Image imglocacao = new Image(getClass().getResourceAsStream("/imagem/loca.png"));
         ImageView imgView2 = new ImageView(imglocacao);
-        imgView2.setFitHeight(65);
-        imgView2.setFitWidth(65);
+        imgView2.setFitHeight(50);
+        imgView2.setFitWidth(50);
         btnLocacao.setGraphic(imgView2);
         
            //Imagem Botao Ocorrencia
         Image imgocorrencia = new Image(getClass().getResourceAsStream("/imagem/ocorrencia.png"));
         ImageView imgView3 = new ImageView(imgocorrencia);
-        imgView3.setFitHeight(65);
-        imgView3.setFitWidth(65);
+        imgView3.setFitHeight(50);
+        imgView3.setFitWidth(50);
         btnOcorrencia.setGraphic(imgView3);
         
             //Imagem Botao Devolucao
         Image imgdevolucao = new Image(getClass().getResourceAsStream("/imagem/devolucao1.png"));
         ImageView imgView4 = new ImageView(imgdevolucao);
-        imgView4.setFitHeight(65);
-        imgView4.setFitWidth(65);
+        imgView4.setFitHeight(50);
+        imgView4.setFitWidth(50);
         btnDevolucao.setGraphic(imgView4);
         
             //Imagem Botao Despesa
         Image imgdespesa = new Image(getClass().getResourceAsStream("/imagem/despesa.png"));
         ImageView imgView5 = new ImageView(imgdespesa);
-        imgView5.setFitHeight(65);
-        imgView5.setFitWidth(65);
+        imgView5.setFitHeight(50);
+        imgView5.setFitWidth(50);
         btnDespesa.setGraphic(imgView5);
         
 //            Imagem Botao Pagamento
         Image imgpagamento = new Image(getClass().getResourceAsStream("/imagem/pagamento.png"));
         ImageView imgView6 = new ImageView(imgpagamento);
-        imgView6.setFitHeight(65);
-        imgView6.setFitWidth(65);
+        imgView6.setFitHeight(50);
+        imgView6.setFitWidth(50);
         btnPagamento.setGraphic(imgView6);
         
 //           //            Imagem Botao Frota

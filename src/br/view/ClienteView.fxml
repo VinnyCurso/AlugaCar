@@ -154,7 +154,7 @@
                <GridPane.margin>
                   <Insets left="10.0" right="10.0" />
                </GridPane.margin></ComboBox>
-            <ComboBox fx:id="cmbEstado" prefHeight="40.0" prefWidth="370.0" promptText="Selecione...." GridPane.rowIndex="15">
+            <ComboBox fx:id="cmbEstado" onAction="#cmbOnActionEstado" prefHeight="40.0" prefWidth="370.0" promptText="Selecione...." GridPane.rowIndex="15">
                <GridPane.margin>
                   <Insets left="10.0" right="10.0" />
                </GridPane.margin></ComboBox>
