@@ -18,6 +18,7 @@ public class Modelo {
     private int ano;
     private float valorLocacao;
     private List <Veiculo> listaVeiculo;
+    private String ka;
 
     public Modelo() {
     }
@@ -28,6 +29,11 @@ public class Modelo {
         this.ano = ano;
         this.valorLocacao = valorLocacao;
         this.listaVeiculo = listaVeiculo;
+    }
+
+    public Modelo(String ka) {
+        this.ka = ka;
+  
     }
 
     public long getCodigo() {

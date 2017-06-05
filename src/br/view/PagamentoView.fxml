@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="775.0" stylesheets="@../../css/pagamentoview.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="775.0" stylesheets="@../../css/pagamentoview.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.controller.PagamentoCtr">
    <top>
       <AnchorPane id="header" prefHeight="85.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
@@ -25,8 +25,8 @@
    <bottom>
       <HBox id="footer" prefHeight="70.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="btnNovo" mnemonicParsing="false" text="Novo" />
-            <Button fx:id="btnSalvar" mnemonicParsing="false" text="Salvar" />
+            <Button fx:id="btnNovo" mnemonicParsing="false" onAction="#btnOnActionNovo" text="Novo" />
+            <Button fx:id="btnSalvar" mnemonicParsing="false" onAction="#btnOnActionSalvar" text="Salvar" />
             <Button fx:id="btnExcluir" mnemonicParsing="false" text="Excluir" />
             <Button fx:id="btnPesquisar" mnemonicParsing="false" text="Pesquisar" />
          </children>
@@ -106,11 +106,11 @@
                <GridPane.margin>
                   <Insets left="10.0" right="10.0" />
                </GridPane.margin></TextField>
-            <ComboBox fx:id="cmbFormaPagamento" prefHeight="40.0" prefWidth="370.0" promptText="Selecione..." GridPane.rowIndex="7">
+            <ComboBox fx:id="cmbFormaPagamento" onAction="#cmbOnActionFormaPagamento" prefHeight="40.0" prefWidth="370.0" promptText="Selecione..." GridPane.rowIndex="7">
                <GridPane.margin>
                   <Insets left="10.0" right="10.0" />
                </GridPane.margin></ComboBox>
-            <ComboBox fx:id="cmbTipoPagamento" prefHeight="40.0" prefWidth="370.0" promptText="Selecione..." GridPane.columnIndex="2" GridPane.rowIndex="7">
+            <ComboBox fx:id="cmbTipoPagamento" onAction="#cmbOnActionTipoPagamento" prefHeight="40.0" prefWidth="370.0" promptText="Selecione..." GridPane.columnIndex="2" GridPane.rowIndex="7">
                <GridPane.margin>
                   <Insets left="10.0" right="10.0" />
                </GridPane.margin></ComboBox>

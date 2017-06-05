@@ -110,6 +110,10 @@ public class Locacao {
     public void setListaOcorrencia(List<Ocorrencia> listaOcorrencia) {
         this.listaOcorrencia = listaOcorrencia;
     }
+
+    public void getSubtotal(float f) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
     

@@ -17,6 +17,7 @@ public class Marca {
     private long codigo;
     private String nome;
     private List<Modelo> listaModelo;
+    private String ford;
 
     public Marca() {
     }
@@ -25,6 +26,12 @@ public class Marca {
         this.codigo = codigo;
         this.nome = nome;
         this.listaModelo = listaModelo;
+    }
+ 
+//Construtores para combo
+    public Marca(String ford) {
+        this.ford = ford;
+   
     }
 
     public long getCodigo() {

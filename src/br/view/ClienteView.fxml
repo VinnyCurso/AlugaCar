@@ -126,7 +126,7 @@
                <GridPane.margin>
                   <Insets left="10.0" right="10.0" />
                </GridPane.margin></TextField>
-            <TextField fx:id="txtNumeroCnh" prefHeight="40.0" prefWidth="307.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <TextField fx:id="txtNumeroCnh" prefHeight="40.0" prefWidth="307.0" promptText="0000000" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets left="10.0" right="10.0" />
                </GridPane.margin></TextField>
@@ -146,11 +146,11 @@
                <GridPane.margin>
                   <Insets left="10.0" right="10.0" />
                </GridPane.margin></TextField>
-            <ComboBox fx:id="cmbCategoria" prefHeight="40.0" prefWidth="370.0" promptText="Selecione...." GridPane.columnIndex="2" GridPane.rowIndex="3">
+            <ComboBox fx:id="cmbCategoria" onAction="#cmbOnActionCategoria" prefHeight="40.0" prefWidth="370.0" promptText="Selecione...." GridPane.columnIndex="2" GridPane.rowIndex="3">
                <GridPane.margin>
                   <Insets left="10.0" right="10.0" />
                </GridPane.margin></ComboBox>
-            <ComboBox fx:id="cmbCidade" prefHeight="40.0" prefWidth="370.0" promptText="Selecione...." GridPane.rowIndex="13">
+            <ComboBox fx:id="cmbCidade" onAction="#cmbOnActionCidade" prefHeight="40.0" prefWidth="370.0" promptText="Selecione...." GridPane.rowIndex="13">
                <GridPane.margin>
                   <Insets left="10.0" right="10.0" />
                </GridPane.margin></ComboBox>
@@ -172,15 +172,15 @@
    <bottom>
       <HBox id="footer" alignment="CENTER" prefHeight="80.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="btnNovo" mnemonicParsing="false" text="Novo">
+            <Button fx:id="btnNovo" mnemonicParsing="false" onAction="#btnOnActionNovo" text="Novo">
                <HBox.margin>
                   <Insets left="20.0" right="20.0" />
                </HBox.margin></Button>
-            <Button fx:id="btnSalvar" mnemonicParsing="false" text="Salvar">
+            <Button fx:id="btnSalvar" mnemonicParsing="false" onAction="#btnOnActionSalvar" text="Salvar">
                <HBox.margin>
                   <Insets left="20.0" right="20.0" />
                </HBox.margin></Button>
-            <Button fx:id="btnExcluir" mnemonicParsing="false" text="Excluir">
+            <Button fx:id="btnExcluir" mnemonicParsing="false" onAction="#btnOnActionExcluir" text="Excluir">
                <HBox.margin>
                   <Insets left="20.0" right="20.0" />
                </HBox.margin></Button>

@@ -16,6 +16,12 @@
     -fx-font-weight: bold italic;
     -fx-text-fill: white;
 }
+
+#titleLink{
+    -fx-font-size: 20px;
+    -fx-font-weight: bold italic;
+    -fx-text-fill: orange;
+}
 #textCampo{
     -fx-pref-heigth: 60px;
 }

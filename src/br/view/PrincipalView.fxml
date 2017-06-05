@@ -8,7 +8,7 @@
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="746.0" stylesheets="@../../css/esliloprincipal.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.controller.PrincipalCtr">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1115.0" stylesheets="@../../css/esliloprincipal.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.controller.PrincipalCtr">
    <children>
       <MenuBar>
         <menus>
@@ -75,23 +75,16 @@
             <Button id="btnToolbar" fx:id="btnDevolucao" alignment="TOP_CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#btnOnActionDevolucao" text="Devolucao" />
             <Button id="btnToolbar" fx:id="btnDespesa" alignment="TOP_CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#btnOnActionDespesa" text="Despesa" />
             <Button id="btnToolbar" fx:id="btnPagamento" alignment="TOP_CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#btnOnActionPagamento" text="Pagamento" />
+          <Button id="btnToolbar" fx:id="btnFrota" alignment="TOP_CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#btnOnActionFrota" text="Frota" />
+            <Button id="btnToolbar" fx:id="btnNotaFiscal" alignment="TOP_CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#btnOnActionNotaFiscal" text="Nota Fiscal" />
+            <Button id="btnToolbar" fx:id="btnManutencao" alignment="TOP_CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#btnOnActionManutencao" text="Manutencao" />
+            <Button id="btnToolbar" fx:id="btnPedido" alignment="TOP_CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#btnOnActionPedido" text="Pedido" />
          </items>
          <VBox.margin>
             <Insets />
          </VBox.margin>
          <padding>
             <Insets left="15.0" />
-         </padding>
-      </ToolBar>
-      <ToolBar id="btnToolbar" prefHeight="100.0" prefWidth="746.0">
-        <items>
-          <Button contentDisplay="CENTER" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" text="Frota" />
-            <Button contentDisplay="CENTER" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" text="Pedido" />
-            <Button contentDisplay="CENTER" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" text="Manutencao" />
-            <Button contentDisplay="CENTER" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" text="Nota Fiscal" />
-        </items>
-         <padding>
-            <Insets left="60.0" right="60.0" />
          </padding>
       </ToolBar>
    </children>
