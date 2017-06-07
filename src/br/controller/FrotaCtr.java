@@ -6,8 +6,10 @@
 package br.controller;
 
 import br.model.Frota;
+import util.ConectaBanco;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -18,6 +20,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javax.swing.JOptionPane;
 
 /**
  * FXML Controller class
@@ -39,6 +42,8 @@ public class FrotaCtr implements Initializable {
 
 private Frota frota;
 
+ConectaBanco conecta = new ConectaBanco();
+
     /**
      * Initializes the controller class.
      */
@@ -56,5 +61,64 @@ private Frota frota;
         dialogStage.setTitle("Manter Frota");
         dialogStage.setScene(scene);
         dialogStage.showAndWait();
+    }
+       
+         @FXML
+    public void btnOnActionSalvar() throws IOException, SQLException {
+
+        frota.setCodigo(txtCodigo.getPrefColumnCount());
+//        frota.setModelo(modelo);
+        frota.setQuantidadeDisponivel(txtQuantidadeDisponivel.getLength());
+        frota.setTotalModelo(txtTotalModelo.getLength());
+
+        System.out.println("Informações do Frota : ");
+        System.out.println("Codigo Frota : " + frota.getCodigo());
+        System.out.println("Modelo : " + frota.getModelo());
+        System.out.println("Quantidade Disponiveis : " + frota.getQuantidadeDisponivel());
+        System.out.println("Total Modelos : " + frota.getTotalModelo());
+  
+    }
+
+    @FXML
+    public void btnOnActionNovo() throws IOException {
+
+        JOptionPane.showMessageDialog(null, "Limpar Dados para novo Cliente ");
+
+        txtCodigo.setText("");
+        txtQuantidadeDisponivel.setText("");
+        cmbModelo.setValue("");
+        txtTotalModelo.setText("");
+
+    }
+
+    @FXML
+    public void btnOnActionExcluir() throws IOException {
+
+        JOptionPane.showMessageDialog(null, "Exclusão feita com Sucesso ");
+        
+        txtCodigo.setText("");
+        txtQuantidadeDisponivel.setText("");
+        cmbModelo.setValue("");
+        txtTotalModelo.setText("");
+        
+    }
+
+//    @FXML
+//    public void btnOnActionPesquisar() throws IOException {
+//
+//        Parent root = FXMLLoader.load(getClass().getResource("/br/view/VeiculoPesquisaView.fxml"));
+//
+//        Stage dialogStage = new Stage();
+//        Scene scene = new Scene(root);
+//
+//        dialogStage.setTitle("Pesquisar Veiculo");
+//        dialogStage.setScene(scene);
+//        dialogStage.showAndWait();
+//    }
+     
+      @FXML
+    public void hlinkOnActionHelpDesk() throws IOException{
+        HelpDeskCtr helpDesk = new HelpDeskCtr();
+        helpDesk.gerarTela();
     }
 }

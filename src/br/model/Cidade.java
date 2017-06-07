@@ -13,10 +13,18 @@ public class Cidade {
     
     private long codigo;
     private String cidade;
+    private Estado estado;
+    
+    
     //Atributos para combo
     private String goiania;
 
     public Cidade() {
+        estado = new Estado();
+    }
+    
+    public Cidade(Estado estado) {
+        this.estado = estado;
     }
 
     public Cidade(long codigo, String cidade) {
@@ -46,5 +54,12 @@ public class Cidade {
     }
     
     
+    public Estado getEstado() {
+        return estado;
+    }
+
+    public void setEstado(Estado estado) {
+        this.estado = estado;
+    }
     
 }

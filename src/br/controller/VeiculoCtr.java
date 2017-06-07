@@ -8,9 +8,11 @@ package br.controller;
 import br.model.Marca;
 import br.model.Modelo;
 import br.model.Veiculo;
+import util.ConectaBanco;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -26,6 +28,7 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javax.swing.JOptionPane;
 
 /**
  * FXML Controller class
@@ -68,7 +71,7 @@ ObservableList<String> ObsListMarca;
 List<String> listModelo;
 ObservableList<String> ObsListModelo;
 
-
+ConectaBanco conecta = new ConectaBanco();
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -92,6 +95,67 @@ ObservableList<String> ObsListModelo;
         dialogStage.showAndWait();
     }
      
+    @FXML
+    public void btnOnActionSalvar() throws IOException, SQLException {
+
+        veiculo.setPlaca(txtPlaca.getText());
+        veiculo.setChassi(txtChassi.getText());
+        veiculo.setAnoFabricacao(txtAnoFabricacao.getPrefColumnCount());
+        veiculo.setCor(txtCor.getText());
+        veiculo.setKmVeiculo((float) txtKmRodados.getHeight());
+
+        System.out.println("Informações do Veiculo : ");
+        System.out.println("Placa : " + veiculo.getPlaca());
+        System.out.println("Chassi : " + veiculo.getChassi());
+        System.out.println("Ano de Fabricacao : " + veiculo.getAnoFabricacao());
+        System.out.println("Cor : " + veiculo.getCor());
+        System.out.println("Quilometros Rodados : " + veiculo.getKmVeiculo());
+
+    }
+
+    @FXML
+    public void btnOnActionNovo() throws IOException {
+
+        JOptionPane.showMessageDialog(null, "Limpar Dados para novo Cliente ");
+
+        cmbMarca.setValue("");
+        cmbModelo.setValue("");
+        txtPlaca.setText("");
+        txtChassi.setText("");
+        txtAnoFabricacao.setText("");
+        txtCor.setText("");
+        txtKmRodados.setText("");
+
+    }
+
+    @FXML
+    public void btnOnActionExcluir() throws IOException {
+
+        JOptionPane.showMessageDialog(null, "Exclusão feita com Sucesso ");
+
+        cmbMarca.setValue("");
+        cmbModelo.setValue("");
+        txtPlaca.setText("");
+        txtChassi.setText("");
+        txtAnoFabricacao.setText("");
+        txtCor.setText("");
+        txtKmRodados.setText("");
+
+    }
+
+//    @FXML
+//    public void btnOnActionPesquisar() throws IOException {
+//
+//        Parent root = FXMLLoader.load(getClass().getResource("/br/view/VeiculoPesquisaView.fxml"));
+//
+//        Stage dialogStage = new Stage();
+//        Scene scene = new Scene(root);
+//
+//        dialogStage.setTitle("Pesquisar Veiculo");
+//        dialogStage.setScene(scene);
+//        dialogStage.showAndWait();
+//    }
+     
       @FXML
     public void hlinkOnActionHelpDesk() throws IOException{
         HelpDeskCtr helpDesk = new HelpDeskCtr();
@@ -99,11 +163,11 @@ ObservableList<String> ObsListModelo;
     }
     @FXML
     public void cmbOnActionMarca(){
-        System.out.println(cmbMarca.getSelectionModel().getSelectedItem().toString());
+        System.out.println("Marca : " + cmbMarca.getSelectionModel().getSelectedItem().toString());
     }
     @FXML
     public void cmbOnActionModelo(){
-         System.out.println(cmbModelo.getSelectionModel().getSelectedItem().toString());
+         System.out.println("Modelo : " + cmbModelo.getSelectionModel().getSelectedItem().toString());
     }
     
      

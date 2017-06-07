@@ -6,8 +6,10 @@
 package br.controller;
 
 import br.model.Descricao;
+import util.ConectaBanco;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -18,6 +20,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javax.swing.JOptionPane;
 
 /**
  * FXML Controller class
@@ -39,6 +42,8 @@ public class DescricaoCtr implements Initializable {
 
 private Descricao descricao;
 
+ConectaBanco conecta = new ConectaBanco();
+
     /**
      * Initializes the controller class.
      */
@@ -56,6 +61,66 @@ private Descricao descricao;
         dialogStage.setTitle("Manter Dsecricao");
         dialogStage.setScene(scene);
         dialogStage.showAndWait();
+    }
+     
+       @FXML
+    public void btnOnActionSalvar() throws IOException, SQLException {
+
+        descricao.setCodigo(txtCodigo.getPrefColumnCount());
+        descricao.setItem(txtItem.getPrefColumnCount());
+        descricao.setSubtotal(txtSubTotal.getPrefColumnCount());
+        descricao.setDescricao(txtareaDescricao.getText());
+
+        System.out.println("Informações do Descricao : ");
+        System.out.println("Codigo : " + descricao.getCodigo());
+        System.out.println("Item : " + descricao.getItem());
+        System.out.println("Sub Total : " + descricao.getSubtotal());
+        System.out.println("Descricao : " + descricao.getDescricao());
+
+
+    }
+
+    @FXML
+    public void btnOnActionNovo() throws IOException {
+
+        JOptionPane.showMessageDialog(null, "Limpar Dados para novo Cliente ");
+
+        txtCodigo.setText("");
+        txtItem.setText("");
+        txtSubTotal.setText("");
+        txtareaDescricao.setText("");
+
+    }
+
+    @FXML
+    public void btnOnActionExcluir() throws IOException {
+
+        JOptionPane.showMessageDialog(null, "Exclusão feita com Sucesso ");
+
+        txtCodigo.setText("");
+        txtItem.setText("");
+        txtSubTotal.setText("");
+        txtareaDescricao.setText("");
+
+    }
+
+//    @FXML
+//    public void btnOnActionPesquisar() throws IOException {
+//
+//        Parent root = FXMLLoader.load(getClass().getResource("/br/view/VeiculoPesquisaView.fxml"));
+//
+//        Stage dialogStage = new Stage();
+//        Scene scene = new Scene(root);
+//
+//        dialogStage.setTitle("Pesquisar Veiculo");
+//        dialogStage.setScene(scene);
+//        dialogStage.showAndWait();
+//    }
+     
+      @FXML
+    public void hlinkOnActionHelpDesk() throws IOException{
+        HelpDeskCtr helpDesk = new HelpDeskCtr();
+        helpDesk.gerarTela();
     }
     
 }

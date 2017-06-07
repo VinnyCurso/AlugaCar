@@ -1,19 +1,25 @@
 package br.controller;
 
+import br.dao.EstadoDao;
 import br.model.CNH;
 import br.model.Cidade;
 import br.model.Cliente;
 import br.model.Contato;
 import br.model.Endereco;
 import br.model.Estado;
+import util.ConectaBanco;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Date;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -90,6 +96,8 @@ public class ClienteCtr implements Initializable {
     List<String> listCategoria;
     ObservableList<String> ObsListCategoria;
 
+    ConectaBanco conecta = new ConectaBanco();
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
@@ -97,6 +105,8 @@ public class ClienteCtr implements Initializable {
         contato = new Contato();
         endereco = new Endereco();
         cnh = new CNH();
+
+        conecta.conexao();
 
         this.CarregarComboCidade();
         this.CarregarComboeEstado();
@@ -115,7 +125,7 @@ public class ClienteCtr implements Initializable {
     }
 
     @FXML
-    public void btnOnActionSalvar() throws IOException {
+    public void btnOnActionSalvar() throws IOException, SQLException {
         //Cliente
         cliente.setNome(txtNome.getText());
         cliente.setCpf(txtCPF.getText());
@@ -184,12 +194,12 @@ public class ClienteCtr implements Initializable {
 
         txtNome.setText("");
         txtCPF.setText("");
-        pikerDataNascimento.setAccessibleText("");
+        pikerDataNascimento.getEditor().clear();
         txtCep.setText("");
         txtLogradouro.setText("");
         txtComplemento.setText("");
         txtNumeroCnh.setText("");
-        pikerVencimentoCnh.setAccessibleText("");
+        pikerVencimentoCnh.getEditor().clear();
         txtTelefoneResidencial.setText("");
         txtCelular.setText("");
         txtEmail.setText("");

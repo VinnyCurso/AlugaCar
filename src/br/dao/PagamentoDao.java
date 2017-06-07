@@ -5,25 +5,26 @@
  */
 package br.dao;
 
-import br.model.Acessorio;
+
+import br.model.Estado;
 import br.model.Pagamento;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author vinicius caetano
  */
 public class PagamentoDao {
-
-    public static void inserir() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
-        private Connection connection;
+private Connection connection;
 
     public Connection getConnection() {
         return connection;
@@ -32,20 +33,83 @@ public class PagamentoDao {
     public void setConnection(Connection connection) {
         this.connection = connection;
     }
-   
-    public boolean inserir(Pagamento pagamento) {
-        String sql = "INSERT INTO pagamento(valorpago, valortroco) VALUES(?,?)";
+
+    public boolean inserir(Estado estado) {
+        String sql = "INSERT INTO estado(estado) VALUES(?)";
         try {
             PreparedStatement stmt = connection.prepareStatement(sql);
-            stmt.setFloat(1, pagamento.getValorPago());
-            stmt.setFloat(2, pagamento.getTroco());
+            stmt.setString(1, estado.getEstado());
+    
             stmt.execute();
             return true;
         } catch (SQLException ex) {
-            Logger.getLogger(ClienteDao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(EstadoDao.class.getName()).log(Level.SEVERE, null, ex);
             return false;
         }
+    }
 
+    public boolean alterar(Estado estado) {
+        String sql = "UPDATE estado SET estado=?  WHERE codigo=?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(sql);
+            stmt.setString(1, estado.getEstado());
+
+            stmt.execute();
+            return true;
+        } catch (SQLException ex) {
+            Logger.getLogger(EstadoDao.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
+        }
+    }
+
+    public boolean remover(Estado estado) {
+        String sql = "DELETE FROM estado WHERE codigo=?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(sql);
+            stmt.setInt(1, (int) estado.getCodigo());
+            stmt.execute();
+            return true;
+        } catch (SQLException ex) {
+            Logger.getLogger(EstadoDao.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
+        }
+    }
+
+    public List<Estado> listar() {
+        String sql = "select * from estado";
+        List<Estado> retorno = new ArrayList<>();
+        try {
+            PreparedStatement stmt = connection.prepareStatement(sql);
+            ResultSet resultado = stmt.executeQuery();
+            while (resultado.next()) {
+                Estado estado = new Estado();
+                estado.setCodigo(resultado.getInt("codigo"));
+                estado.setEstado(resultado.getString("estado"));
+ 
+                retorno.add(estado);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(EstadoDao.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return retorno;
+    }
+
+    public Estado buscar(Estado estado) {
+        String sql = "SELECT * FROM estado WHERE codigo=?";
+        Estado retorno = new Estado();
+        try {
+            PreparedStatement stmt = connection.prepareStatement(sql);
+            stmt.setInt(1, (int) estado.getCodigo());
+            ResultSet resultado = stmt.executeQuery();
+            if (resultado.next()) {
+                estado.setCodigo(resultado.getInt("Codigo"));
+                estado.setEstado(resultado.getString("Estado"));
     
-}
+                retorno = estado;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(EstadoDao.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return retorno;
+    }
 }

@@ -13,6 +13,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuItem;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
@@ -33,6 +34,8 @@ public class PrincipalCtr implements Initializable {
      @FXML private Button btnDevolucao;
      @FXML private Button btnDespesa;
      @FXML private Button btnPagamento;
+     
+     @FXML private MenuItem menuItemCadastrarEstado;
      
      @FXML private Button btnFrota;
      @FXML private Button btnPedido;
@@ -219,6 +222,14 @@ public class PrincipalCtr implements Initializable {
         
         PedidoCtr pedidoCtr = new PedidoCtr();
         pedidoCtr.gerarTela();
+}
+    
+       //Ação para cadastro de estado
+     @FXML
+    public void btnOnActionEstado()throws IOException {
+        
+        EstadoCtr estadoCtr = new EstadoCtr();
+        estadoCtr.gerarTela();
 }
     
 }

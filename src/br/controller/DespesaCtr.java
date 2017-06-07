@@ -6,8 +6,10 @@
 package br.controller;
 
 import br.model.Despesa;
+import util.ConectaBanco;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -19,6 +21,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javax.swing.JOptionPane;
 
 /**
  * FXML Controller class
@@ -41,6 +44,8 @@ public class DespesaCtr implements Initializable {
 
 private Despesa despesa;
 
+ConectaBanco conecta = new ConectaBanco();
+
     /**
      * Initializes the controller class.
      */
@@ -58,6 +63,68 @@ private Despesa despesa;
         dialogStage.setTitle("Manter Despesa");
         dialogStage.setScene(scene);
         dialogStage.showAndWait();
+    }
+      
+      @FXML
+    public void btnOnActionSalvar() throws IOException, SQLException {
+
+        despesa.setCodigo(txtCodigo.getPrefColumnCount());
+        despesa.setData(dateDespesa.getValue());
+        despesa.setValorTotalDespesa(txtValorTotal.getPrefColumnCount());
+//        despesa.setPagamento(pagamento.get);
+
+        System.out.println("Informações do Despesa : ");
+        System.out.println("Codigo : " + despesa.getCodigo());
+        System.out.println("Data da Despesa : " + despesa.getData());
+        System.out.println("Valor Total : " + despesa.getValorTotalDespesa());
+        System.out.println("Pagamento : " + despesa.getPagamento());
+
+
+    }
+
+    @FXML
+    public void btnOnActionNovo() throws IOException {
+
+        JOptionPane.showMessageDialog(null, "Limpar Dados para novo Cliente ");
+
+        txtCodigo.setText("");
+        dateDespesa.setAccessibleText("");
+        txtValorTotal.setText("");
+        cmbTIpoDespesa.setValue("");
+        txtPagamento.setText("");
+
+    }
+
+    @FXML
+    public void btnOnActionExcluir() throws IOException {
+
+        JOptionPane.showMessageDialog(null, "Exclusão feita com Sucesso ");
+        
+        txtCodigo.setText("");
+        dateDespesa.setAccessibleText("");
+        txtValorTotal.setText("");
+        cmbTIpoDespesa.setValue("");
+        txtPagamento.setText("");
+
+    }
+
+//    @FXML
+//    public void btnOnActionPesquisar() throws IOException {
+//
+//        Parent root = FXMLLoader.load(getClass().getResource("/br/view/VeiculoPesquisaView.fxml"));
+//
+//        Stage dialogStage = new Stage();
+//        Scene scene = new Scene(root);
+//
+//        dialogStage.setTitle("Pesquisar Veiculo");
+//        dialogStage.setScene(scene);
+//        dialogStage.showAndWait();
+//    }
+     
+      @FXML
+    public void hlinkOnActionHelpDesk() throws IOException{
+        HelpDeskCtr helpDesk = new HelpDeskCtr();
+        helpDesk.gerarTela();
     }
     
 }

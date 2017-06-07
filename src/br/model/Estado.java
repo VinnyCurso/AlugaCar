@@ -32,6 +32,11 @@ public class Estado {
         return codigo;
     }
 
+    @Override
+    public String toString() {
+        return "Estado{" + "estado=" + estado + '}';
+    }
+
     public void setCodigo(long codigo) {
         this.codigo = codigo;
     }

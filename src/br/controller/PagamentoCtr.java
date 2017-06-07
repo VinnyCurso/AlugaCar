@@ -5,10 +5,16 @@
  */
 package br.controller;
 
+import br.dao.PagamentoDao;
 import br.model.Locacao;
 import br.model.Pagamento;
+import util.ConectaBanco;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -67,6 +73,11 @@ public class PagamentoCtr implements Initializable {
 
     private Pagamento pagamento;
     private Locacao locacao;
+    
+    
+      //Atritutos para manipulação banco de dados
+    
+    ConectaBanco conecta = new ConectaBanco();
 
     /**
      * Initializes the controller class.
@@ -75,6 +86,7 @@ public class PagamentoCtr implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         pagamento = new Pagamento();
         locacao = new Locacao();
+         conecta.conexao();
 
         this.CarregarComboFormaPagamento();
         this.CarregarComboTipoPagamento();
@@ -110,10 +122,27 @@ public class PagamentoCtr implements Initializable {
 //        System.out.println("Data Pagamento: " + pagamento.getData());
 //        System.out.println("Troco: " + pagamento.getTroco());
 //        cmbOnActionTipoPagamento();
-        br.dao.PagamentoDao.inserir();
+
+        String sql = "insert into pagamento (valorpago,valortroco) values (?,?)"; 
+        
+        try {
+            
+            PreparedStatement prepared = conecta.conection.prepareStatement(sql);
+            
+            prepared.setFloat(1, (float) txtValorPago.getPrefWidth());
+            prepared.setFloat(2, (float) txttroco.getPrefWidth());
+            
+            prepared.executeUpdate();
+            
+            JOptionPane.showMessageDialog(null, " Salvo com sucesso ");
+            
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, " Erro ao salvar informações \n " + ex);
+        }
 
     }
-
+                   
+    
     @FXML
     public void btnOnActionNovo() throws IOException {
 
@@ -166,5 +195,5 @@ public class PagamentoCtr implements Initializable {
         ObsListTipoPagamento = FXCollections.observableArrayList(listTipoPagamento);
         cmbTipoPagamento.setItems(ObsListTipoPagamento);
     }
-
+    
 }

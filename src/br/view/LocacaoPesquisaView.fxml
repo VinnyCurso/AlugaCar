@@ -25,15 +25,14 @@
       <AnchorPane id="footer" prefHeight="77.0" prefWidth="760.0" BorderPane.alignment="CENTER" />
    </bottom>
    <center>
-      <TableView fx:id="tabelaViewCliente" BorderPane.alignment="CENTER">
+      <TableView BorderPane.alignment="CENTER">
         <columns>
-          <TableColumn fx:id="tabelaColunaCodigo" prefWidth="75.0" text="ID" />
-          <TableColumn fx:id="tabelaColunaNome" prefWidth="75.0" text="NOME" />
-            <TableColumn fx:id="tabelaColunaCpf" prefWidth="75.0" text="CPF" />
+          <TableColumn prefWidth="75.0" text="ID" />
+          <TableColumn prefWidth="75.0" text="NOME" />
+            <TableColumn prefWidth="75.0" text="CPF" />
+            <TableColumn prefWidth="75.0" text="N° CNH" />
+            <TableColumn prefWidth="75.0" text="CELULAR" />
         </columns>
-         <columnResizePolicy>
-            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-         </columnResizePolicy>
       </TableView>
    </center>
 </BorderPane>

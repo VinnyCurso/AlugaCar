@@ -11,6 +11,7 @@ package br.model;
  */
 public class Endereco {
     
+    private long codigo;
     private String cep;
     private String logradouro;
     private String complemento;
@@ -20,7 +21,8 @@ public class Endereco {
     public Endereco() {
     }
 
-    public Endereco(String cep, String logradouro, String complemento, Cidade cidade, Estado estado) {
+    public Endereco(long codigo,String cep, String logradouro, String complemento, Cidade cidade, Estado estado) {
+         this.codigo = codigo;
         this.cep = cep;
         this.logradouro = logradouro;
         this.complemento = complemento;
@@ -66,6 +68,14 @@ public class Endereco {
 
     public void setEstado(Estado estado) {
         this.estado = estado;
+    }
+
+    public long getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(long codigo) {
+        this.codigo = codigo;
     }
     
     

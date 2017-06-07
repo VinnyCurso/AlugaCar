@@ -9,6 +9,7 @@ import br.model.Locacao;
 import br.model.Veiculo;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.ResourceBundle;
 import javafx.collections.ObservableList;
@@ -22,6 +23,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javax.swing.JOptionPane;
 
 /**
  * FXML Controller class
@@ -66,6 +68,78 @@ ObservableList<Veiculo> item;
         dialogStage.setTitle("Manter Locacao");
         dialogStage.setScene(scene);
         dialogStage.showAndWait();
+    }
+     
+       @FXML
+    public void btnOnActionSalvar() throws IOException, SQLException {
+
+        locacao.setCodigo(txtCodigo.getPrefColumnCount());
+        locacao.setKmInicial((float) txtKmInicial.getHeight());
+        locacao.setDataLocacao(DateLocacao.getValue());
+        locacao.setFinalidade(txtFinalidade.getText());
+        locacao.setSubtotal((float) txtSubTotal.getHeight());
+        locacao.setKmFinal((float) txtKmFinal.getHeight());
+
+
+        System.out.println("Informações do Locacao : ");
+        System.out.println("Codigo Locacao : " + locacao.getCodigo());
+        System.out.println("Quilometros Inicial : " + locacao.getKmInicial());
+        System.out.println("Data Locacao : " + locacao.getDataLocacao());
+        System.out.println("Finalidade  : " + locacao.getFinalidade());
+        System.out.println("Valor Total : " + locacao.getSubtotal());
+        System.out.println("Quilometros Final : " + locacao.getKmFinal());
+  
+    }
+
+    @FXML
+    public void btnOnActionNovo() throws IOException {
+
+        JOptionPane.showMessageDialog(null, "Limpar Dados para novo Cliente ");
+
+        cmbVeiculo.setValue("");
+        txtKmInicial.setText("");
+        DateLocacao.setAccessibleHelp("");
+        txtCodigo.setText("");
+        txtFinalidade.setText("");
+        txtKmFinal.setText("");
+        txtSubTotal.setText("");
+        cmbStatus.setValue("");
+
+    }
+
+    @FXML
+    public void btnOnActionExcluir() throws IOException {
+
+        JOptionPane.showMessageDialog(null, "Exclusão feita com Sucesso ");
+
+        cmbVeiculo.setValue("");
+        txtKmInicial.setText("");
+        DateLocacao.setAccessibleHelp("");
+        txtCodigo.setText("");
+        txtFinalidade.setText("");
+        txtKmFinal.setText("");
+        txtSubTotal.setText("");
+        cmbStatus.setValue("");
+
+    }
+
+//    @FXML
+//    public void btnOnActionPesquisar() throws IOException {
+//
+//        Parent root = FXMLLoader.load(getClass().getResource("/br/view/VeiculoPesquisaView.fxml"));
+//
+//        Stage dialogStage = new Stage();
+//        Scene scene = new Scene(root);
+//
+//        dialogStage.setTitle("Pesquisar Veiculo");
+//        dialogStage.setScene(scene);
+//        dialogStage.showAndWait();
+//    }
+     
+      @FXML
+    public void hlinkOnActionHelpDesk() throws IOException{
+        HelpDeskCtr helpDesk = new HelpDeskCtr();
+        helpDesk.gerarTela();
     }
     
 }
